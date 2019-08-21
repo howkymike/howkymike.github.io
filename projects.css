@@ -1,0 +1,88 @@
+#projects > hr {
+    margin-top: 100px;
+    border: 5px solid #BC3C2C;
+    width: 25%;
+    border-radius: 5px;
+}
+
+.section-name {
+    color: #C3C3C3;
+    font-family: "Roboto", sans-serif
+}
+
+.card {
+    position : relative;
+    height: 450px;
+    width: 900px;
+/*    margin : 200px auto; */
+    background-color : #FFF;
+    box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: row;
+    margin: 50px auto;
+}
+
+.card-right {
+    background-image: url("steroids1.png");
+    flex: 3;
+}
+
+.card-left {
+    flex: 2;
+    padding: 10px;
+}
+
+.card-title {
+    padding-top: 15px;
+    font-size: 2rem;
+    color: #4B4B4B;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.card-technologies {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-tech {
+    background-color : #d6e5f0;
+    color: #3e7aa7;
+    border-radius: 10px;
+    height : 30px;
+    text-align: center;
+    line-height: 30px;
+    font-family: 'Roboto Mono', monospace;
+    margin: 1px 5px;
+    padding: 0 8px;
+}
+
+.separator {
+    margin-top : 10px;
+    border : 1px solid #C3C3C3;
+}
+
+.card-desc {
+    margin: 10px;
+    border: none;
+}
+
+.myFab {
+    position : absolute;
+    right : 30px;
+    bottom : 20px;
+    box-sizing: border-box;
+    padding-top: 18px;
+    background-color : #BC3C2C;
+    width : 70px;
+    height : 70px;
+    color : white;
+    text-align : center;
+    border-radius : 50%;
+    box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.myFab i {
+    line-height: 34px;
+}
