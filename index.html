@@ -3,402 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=”description” content=”Michał Jastrzębski - Portfolio. Full Stack Developer.”>
     <title>Portfolio</title>
 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="projects.css">
-    <link rel="stylesheet" href="personal.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/410052e324.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.3/dist/typeit.min.js"></script>
 </head>
 
-<style>
-    body {
-        margin: 0;
-        background-color: #1D1B1B;
-    }
-
-    .open-main-nav {
-        display: none;
-    }
-
-    .main-nav {
-        position: absolute;
-        font-family: 'Inconsolata', sans-serif;
-        right: 10%;
-    }
-
-    .main-nav > ul {
-        list-style-type: none;
-    }
-
-    .main-nav > ul > li {
-        float: left;
-        margin: 0 25px;
-    }
-
-    .main-nav > ul > li > a {
-        text-decoration: none;
-        color: #C3C3C3;
-        font-weight: 800;
-        font-size: 24px;
-        text-transform: uppercase;
-    }
-
-    .main-nav > ul > li > a:hover {
-        border-bottom: 2px solid #C3C3C3;
-    }
-
-    .link {
-        color: #C3C3C3;
-        display: inline-block;
-        padding: 15px 0;
-        margin: 15px 25px;
-        position: relative;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 800;
-        font-size: 24px;
-    }
-
-    .bar {
-        width: 100%;
-        display: inline-block;
-        border-bottom: 5px solid #C3C3C3;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        opacity: 0;
-        transition: all 300ms;
-    }
-
-    .title:hover + .bar{
-        opacity: 1;
-        bottom: 5px;
-    }
-
-
-    .centeredContainer {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .topnav {
-        overflow: hidden;
-  /*      background-color: #605F5F; */
-    }
-
-    .topnav a {
-        float: right;
-        color: #EC4D37;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        font-weight: bold;
-    }
-
-    .topnav a:hover {
-        background-color: #4A4848;
-        color: #BC3C2C;
-    }
-
-    .topnav a.active {
-        background-color: #605F5F;
-        color: #EC4D37;
-    }
-
-    #main {
-    }
-
-    #about {
-        padding-top: 50px;
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    #showoff {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    /*    height: 100vh; */
- /*       background-color: #333; */
-    }
-
-
-    .terminal {
-        width: 50vw;
-        height: 30vw;
-        border-radius: 7px;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.56);
-        background: #000;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-    }
-
-    .terminal-head{
-        display: flex;
-        padding: 5px;
-        background: linear-gradient(#e2e0e2, #c7c6c8);
-    }
-
-    .terminal-button {
-        position: relative;
-        width: 12px;
-        height: 12px;
-        margin-right: 8px;
-        border-radius: 50%;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        padding: 0;
-    }
-
-    .terminal-button-close {
-         background: #ff615a;
-     }
-
-    .terminal-button-minimize {
-         background: #ffc230;
-     }
-
-    .terminal-button-expand {
-         background: #29cb41;
-     }
-
-    .terminal-title {
-         text-align: center;
-         color: #494849;
-         font-family: sans-serif;
-         font-size: 13px;
-         width: 100%;
-     }
-
-    .terminal-content {
- /*       overflow-y: scroll;*/
-        padding: 10px;
-        font-size: 14px;
-        color: lightgray;
-        font-family: 'Inconsolata', monospace;
-        font-size: larger;
-    }
-
-    #projects {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    footer {
-        text-align: center;
-        font-family: 'Inconsolata', monospace;
-        color: #BC3C2C;
-        margin-top: 100px;
-        padding-bottom: 20px;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .open-main-nav {
-            display: block;
-            position: absolute;
-            top: 15px;
-            padding-top: 20px;
-            right: 15px;
-            z-index: 1000;
-            background: none;
-            border: 0;
-            cursor: pointer;
-        }
-        .open-main-nav:focus {
-            outline: none;
-        }
-        .burger {
-            position: relative;
-            display: block;
-            width: 28px;
-            height: 4px;
-            margin: 0 auto;
-            background: #5A3B5D;
-            transform: skew(5deg);
-            transition: all .275s;
-        }
-        .burger:after,
-        .burger:before {
-            content: '';
-            display: block;
-            height: 100%;
-            background: #5A3B5D;
-            transition: all .275s;
-        }
-        .burger:after {
-            transform: translateY(-12px) translateX(-2px) skew(-20deg);
-        }
-        .burger:before {
-            transform: translateY(-16px) skew(-10deg);
-        }
-        /* Toggle State part */
-        .is-open .burger {
-            transform: skew(5deg) translateY(-8px) rotate(-45deg);
-        }
-        .is-open .burger:before {
-            transform: translateY(0px) skew(-10deg) rotate(75deg);
-        }
-        .is-open .burger:after {
-            transform: translateY(-12px) translateX(10px) skew(-20deg);
-            opacity: 0;
-        }
-        /* MENU Text part */
-        .burger-text {
-            display: block;
-            font-size: .675rem;
-            letter-spacing: .05em;
-            margin-top: .5em;
-            text-transform: uppercase;
-            font-weight: 500;
-            text-align: center;
-            color: #5A3B5D;
-        }
-        /* Main menu positionning */
-        .main-nav {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            text-align: center;
-            background: #1d1b1b;
-            opacity: 0;
-            z-index: -1;
-            visibility: hidden;
-            transition: all .375s;
-        }
-        .main-nav.is-open {
-            opacity: 1;
-            z-index: 100;
-            visibility: visible;
-        }
-        /* Yellow band effect */
-        .main-nav::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: -15px;
-            background: #FEDC2A;
-            transform-origin: 0 0;
-            transform: skew(-14deg) translateX(-120%);
-            transition: all .275s .1s;
-        }
-        .main-nav.is-open::before {
-            transform: skew(-14deg) translateX(0);
-        }
-        /* Skewing effect on menu links */
-        .main-nav ul {
-            display: inline-flex;
-            flex-direction: column;
-            height: 100%;
-            align-items: flex-end;
-            justify-content: center;
-            transform: translateX(-18%) skew(-16deg);
-        }
-
-        .main-nav li {
-            display: block;
-            margin: .5rem 0;
-            text-align: right;
-            transform: skew(16deg);
-        }
-        /* Apparition effect on links */
-        .main-nav a {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        .main-nav.is-open a {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .main-nav li:nth-child(1) a {
-            transition: all 275ms 175ms
-        }
-        .main-nav li:nth-child(2) a {
-            transition: all 275ms 225ms
-        }
-        .main-nav li:nth-child(3) a {
-            transition: all 275ms 275ms
-        }
-        .main-nav li:nth-child(4) a {
-            transition: all 275ms 325ms
-        }
-        .main-nav li:nth-child(5) a {
-            transition: all 275ms 375ms
-        }
-        /* Decoration */
-        .main-nav ul,
-        .main-nav li {
-            list-style: none;
-            padding: 0;
-        }
-        .main-nav a {
-            display: block;
-            padding: 12px 0;
-            color: #5A3B5D;
-            font-size: 1.4em;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .main-nav > ul > li > a {
-            color: #5A3B5D;
-            text-transform: none;
-        }
-
-
-        .personal > div:first-child {
-            font-size: 2rem;
-        }
-
-        .personal > div:nth-child(2n) {
-            font-size: 1rem;
-        }
-
-        .terminal {
-            width: 90%;
-            min-height: 400px;
-        }
-
-        .card {
-            width: 90%;
-            flex-direction: column;
-        }
-
-        .myFab {
-            width: 3em;
-            height: 3em;
-            bottom: -15px;
-        }
-
-        .myFab i {
-            line-height: 50%;
-        }
-
-
-
-    }
-
-</style>
 <body>
-<!--    <div id="navbar" class="topnav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#résumé">Résumé</a>
-    </div> -->
 <button id="burger" class="open-main-nav">
     <span class="burger"></span>
     <span class="burger-text">Menu</span>
@@ -433,7 +49,6 @@
                         </div>
                     </div>
                     <div class="terminal-content">
-                        <!--                       <span class="terminal-content-arrow">➜</span> <span class="terminal-content-tilde">~</span> <div id="test"><span class="terminal-content-caret"></span> -->
                         <span id="terminal-type-effect"></span>
                     </div>
                 </div>
@@ -458,13 +73,13 @@
                         If you are in a trouble, you can always turn to the dark side. But beware of consequences!!!
                     </div>
                 </div>
-                <div class="myFab">
+                <a class="myFab" href="https://play.google.com/store/apps/details?id=com.howky.hubert.gameoflife">
                     <i class="fas fa-arrow-right fa-2x"></i>
-                </div>
+                </a>
             </div>
 
             <div class="card">
-                <div class="card-right" style="background-image: url('alfresco_logo.png'); background-size: cover;"></div>
+                <div class="card-right" style="background-image: url('images/alfresco_logo.png'); background-size: cover;"></div>
                 <div class="card-left">
                     <div class="card-title">Alfresco Development</div>
                     <div class="card-technologies">
@@ -478,13 +93,13 @@
                         Freemarker, Activiti, HTML, CSS, Javascript.
                     </div>
                 </div>
-                <div class="myFab">
-                    <i class="fas fa-arrow-right fa-2x"></i>
-                </div>
+                    <a class="myFab" href="https://github.com/howkymike/Alfresco-Windows-Installation-Guide">
+                        <i class="fas fa-arrow-right fa-2x"></i>
+                    </a>
             </div>
 
             <div class="card">
-                <div class="card-right" style="background-image: url('udacity.png');background-size: contain;background-repeat: no-repeat;
+                <div class="card-right" style="background-image: url('images/udacity.png');background-size: contain;background-repeat: no-repeat;
                 background-position: center;"></div>
                 <div class="card-left">
                     <div class="card-title">Udacity Nanodegree</div>
@@ -501,13 +116,13 @@
 
                     </div>
                 </div>
-                <div class="myFab">
+                    <a class="myFab" href="https://github.com/howkymike/PopMovies">
                     <i class="fas fa-arrow-right fa-2x"></i>
-                </div>
+                    </a>
             </div>
 
             <div class="card">
-                <div class="card-right" style="background-image: url('html-js-css.png');background-size: contain;background-repeat: no-repeat;
+                <div class="card-right" style="background-image: url('images/html-js-css.png');background-size: contain;background-repeat: no-repeat;
                 background-position: center;background-color: #373f49;"></div>
                 <div class="card-left">
                     <div class="card-title">Portfolio website</div>
@@ -521,9 +136,9 @@
                         Pages. Technologies used: HTML, Javascript, CSS, and awesome JS libraries (Font Awesome & TypeIt).
                     </div>
                 </div>
-                <div class="myFab">
+                    <a class="myFab" href="https://github.com/howkymike/howkymike.github.io">
                     <i class="fas fa-arrow-right fa-2x"></i>
-                </div>
+                    </a>
             </div>
         </div>
 
@@ -531,8 +146,8 @@
             <hr><div class="section-name">CONTACT</div>
             <div class="contacts">
                 <a href="mailto:michal@jastrzebscy.org?Subject=Job%20Offer"><i class="fas fa-envelope"></i> Email</a>
-                <a href=""><i class="fab fa-github"></i> Github</a>
-                <a href=""><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/howkymike"><i class="fab fa-github"></i> Github</a>
+                <a href="https://www.linkedin.com/in/michal-jastrzebski/"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
             <a class="contact-resume" href="" download>Download Résumé</a>
         </div>
@@ -551,7 +166,7 @@
     if (document.documentElement.clientWidth < 600) {
         let burger = document.getElementById('burger'),
             nav    = document.getElementById('main-nav');
-        burger.addEventListener('click', function(e){
+        burger.addEventListener('click', function(){
             this.classList.toggle('is-open');
             nav.classList.toggle('is-open');
         });
