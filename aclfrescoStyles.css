@@ -5,7 +5,13 @@
     margin: 10px;
 }
 
-.alfresco-info > div:nth-child(2n) {
+.alfresco-info-image{
+    position: absolute;
+    right: 7%;
+    width: 30%;
+}
+
+.alfresco-info-text {
     font-family: 'Inconsolata', sans-serif;
     font-size: 1.5rem;
     color: #C3C3C3;
@@ -45,6 +51,7 @@
 
 /* Caption of Modal Image */
 #caption {
+    font-family: "Roboto", sans-serif;
     margin: auto;
     display: block;
     width: 80%;
@@ -95,5 +102,12 @@
 @media only screen and (max-width: 700px){
     .modal-content {
         width: 100%;
+    }
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 1200px){
+    .alfresco-info-image {
+        display: none;
     }
 }
