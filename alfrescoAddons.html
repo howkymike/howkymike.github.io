@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=”description” content=”Michał Jastrzębski - Portfolio. Full Stack Developer.”>
+    <title>Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="aclfrescoStyles.css">
+    <script src="https://kit.fontawesome.com/410052e324.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.3/dist/typeit.min.js"></script>
+</head>
+
+<body>
+<button id="burger" class="open-main-nav">
+    <span class="burger"></span>
+    <span class="burger-text">Menu</span>
+</button>
+<nav class="main-nav" id="main-nav">
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="#projects">Alfresco content</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+<div id="main">
+    <div id="about">
+        <div class="alfresco-info">
+            <div>Alfresco - Content & Process Management Platform</div>
+            <img class="alfresco-info-image" src="images/alfrescoOnlyLogo.png" alt="Alfresco logo">
+            <div class="alfresco-info-text"><p>Alfresco Community is a great platform with huge possibilities which are just waiting for you to grab and use.
+                <br>It consists of 3 main applications:
+                <ul>
+                    <li>Afresco Content Services - core of the Alfresco. It provides the backend for the content services.</li>
+                    <li>Activiti - workflow engine. Thanks to it, you can execute business processes described in BPMN 2.0.</li>
+                    <li>Alfresco Share - ready to use, mature and highly customizable web-based environment.</li>
+                </ul></p>
+                <p>What can you use it for? <br> Everything which is connected with documents and involves more than one person.</p>
+                <p>Unfortunately, is not easy to get started. That is why i created a few addons which you can find below. Whenever you are interested in one of them, let me know!</p>
+                </div>
+        </div>
+    </div>
+    <div id="myModal"  class="modal" >
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01" alt="Modal Image">
+        <div id="caption"></div>
+    </div>
+
+    <div id="projects">
+        <hr><div class="section-name">Alfresco content</div>
+        <div class="card">
+            <div class="card-right modalDivImg" alt="Workflow Summary Dashlet"  onclick="makeModal(this)" style="background-image: url('images/workflowSummary.png'); background-size: cover;"></div>
+            <div class="card-left">
+                <div class="card-title">Workflow summary dashlet</div>
+                <div class="card-technologies">
+                    <div class="card-tech">
+                        <span>workflows</span>
+                    </div>
+                    <div class="card-tech">
+                        <span>manager tools</span>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="card-desc">This addon allows the manager group (not only admins!) to see all workflows instances and basic information about them.
+                    You can also filter them by process name, dates (started before / stared after), applicant's username and completed boolean.
+                    Don't you remember applicant's username? Start typing and the addon will list you all possibilities!
+                </div>
+            </div>
+            <a class="myFab" href="https://www.linkedin.com/in/michal-jastrzebski/">
+                <i class="fas fa-arrow-right fa-2x"></i>
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="card-right modalDivImg" alt="Comments integration"  onclick="makeModal(this)" style="background-image: url('images/taskComments.png'); background-size: cover;"></div>
+            <div class="card-left">
+                <div class="card-title">Comments integration</div>
+                <div class="card-technologies">
+                    <div class="card-tech">
+                        <span>tasks</span>
+                    </div>
+                    <div class="card-tech">
+                        <span>better control</span>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="card-desc"><p>If your business process allows users to type comments, it's always nice to have them close.
+                    This extension gathers comments from every task and shows them in the beginning of the next task.</p>
+                    <p>It is also possible to integrate document's comments with the task's comments.</p>
+                </div>
+            </div>
+            <a class="myFab" href="https://www.linkedin.com/in/michal-jastrzebski/">
+                <i class="fas fa-arrow-right fa-2x"></i>
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="card-right" alt="Document preview" style="background-image: url('images/alfrescoLogo.png');background-repeat: no-repeat;background-size: contain; background-position: center; background-color: #00953b;"></div>
+            <div class="card-left">
+                <div class="card-title">Document preview while editing a task</div>
+                <div class="card-technologies">
+                    <div class="card-tech">
+                        <span>workflows</span>
+                    </div>
+                    <div class="card-tech">
+                        <span>time-saver</span>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="card-desc">How many times were you so frustrated that you have to fill in the details about the document you don't see?
+                    How irritating it is to click on the document, read it, remember the information you have to fill, go back to task, start filling and then click the document again just to remember the details? This add-on will make those problems disappear! From now on, you are going to see documents while editing the task.
+                </div>
+            </div>
+            <a class="myFab" href="https://www.linkedin.com/in/michal-jastrzebski/">
+                <i class="fas fa-arrow-right fa-2x"></i>
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="card-right" style="background-image: url('images/activitiLogo.png'); background-size: contain;"></div>
+            <div class="card-left">
+                <div class="card-title">Activiti training</div>
+                <div class="card-technologies">
+                    <div class="card-tech">
+                        <span>activiti</span>
+                    </div>
+                    <div class="card-tech">
+                        <span>training</span>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="card-desc">Do you find Activiti interesting and want to learn about it? Do you want to create advanced workflows and integrate them with your Alfresco instance?
+                    Don't waste weeks or even months on self-learning, get the Activiti training for just a small fee!
+                    Contact me for more info.
+                    <br>Aren't you satisfied with the training, didn't it meet your expectations? You can always ask for the refund.
+                </div>
+            </div>
+            <a class="myFab" href="https://www.linkedin.com/in/michal-jastrzebski/">
+                <i class="fas fa-arrow-right fa-2x"></i>
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="card-right" style="background-image: url('images/alfrescoPL.png'); background-size: contain; background-repeat: no-repeat;background-position: center; margin: 8px;"></div>
+            <div class="card-left">
+                <div class="card-title">Polish language Pack</div>
+                <div class="card-technologies">
+                    <div class="card-tech">
+                        <span>I18n</span>
+                    </div>
+                    <div class="card-tech">
+                        <span>polish</span>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="card-desc">Are you tired of forcing Alfresco to use your native, polish language? Are some messages translated, and some not?
+                    Are repository directories still in english?
+                    Contact me and your problems will be gone forever.
+                </div>
+            </div>
+            <a class="myFab" href="https://www.linkedin.com/in/michal-jastrzebski/">
+                <i class="fas fa-arrow-right fa-2x"></i>
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="card-right" alt="Document preview" style="background-image: url('images/alfrescoLogo.png');background-repeat: no-repeat;background-size: contain; background-position: center; background-color: #00953b;"></div>
+            <div class="card-left">
+                <div class="card-title">Alfresco installation & configuration</div>
+                <div class="card-technologies">
+                    <div class="card-tech">
+                        <span>installation</span>
+                    </div>
+                    <div class="card-tech">
+                        <span>configuration</span>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="card-desc">Do you want to benefit from Alfresco Community platform but you don't know how to start? Let me know and I will install and configure it for you!
+                    Additional customization is also available.
+                    <p>You will be provided with the latest, <b>secure</b> and bugs-free Alfresco Community platform.</p>
+                </div>
+            </div>
+            <a class="myFab" href="https://www.linkedin.com/in/michal-jastrzebski/">
+                <i class="fas fa-arrow-right fa-2x"></i>
+            </a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <hr><div class="section-name">CONTACT</div>
+        <div class="contacts">
+            <a href="https://www.linkedin.com/in/michal-jastrzebski/"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://github.com/howkymike"><i class="fab fa-github"></i> Github</a>
+            <a href="https://www.linkedin.com/in/michal-jastrzebski/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <a class="contact-resume" href="https://github.com/howkymike/howkymike.github.io/raw/master/resume-en.pdf" download>Download Résumé</a>
+    </div>
+    <div id="résumé">
+
+    </div>
+</div>
+
+<footer>
+    <p>Made by Michał Jastrzębski © 2020</p>
+</footer>
+
+
+<script>
+    // mobile
+    if (document.documentElement.clientWidth < 600) {
+        let burger = document.getElementById('burger'),
+            nav    = document.getElementById('main-nav');
+        burger.addEventListener('click', function(){
+            this.classList.toggle('is-open');
+            nav.classList.toggle('is-open');
+        });
+
+    }
+
+
+    // MODAL IMAGES
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    function makeModal(context) {
+        modal.style.display = "block";
+        modalImg.src = context.style.backgroundImage.substring(5, context.style.backgroundImage.length -2);
+        captionText.innerHTML = context.getAttribute("alt");
+    }
+
+</script>
+</body>
+</html>
