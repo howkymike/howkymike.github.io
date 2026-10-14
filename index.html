@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name=”description” content=”Michał Jastrzębski - Portfolio. Full Stack Developer.”>
-    <title>Portfolio</title>
+    <meta name="description" content="Michał Jastrzębski — software developer building Android applications and Alfresco solutions.">
+    <meta name="theme-color" content="#101311">
+    <title>Michał Jastrzębski — Software Developer</title>
 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
@@ -15,11 +16,11 @@
 </head>
 
 <body>
-<button id="burger" class="open-main-nav">
+<button id="burger" class="open-main-nav" type="button" aria-label="Toggle navigation" aria-expanded="false">
     <span class="burger"></span>
     <span class="burger-text">Menu</span>
 </button>
-<nav class="main-nav" id="main-nav">
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
     <ul>
         <li>
             <a href="#projects">Projects</a>
@@ -37,9 +38,7 @@
         <div id="about">
             <div class="personal">
                 <div>Michał Jastrzębski</div>
-                <div>I am an energetic, responsible, ambitious and hard-working person who has developed a mature
-                    approach to any task that I undertake. Currently, I am an IT student at the AGH University in Kraków,
-                    Poland. I am able to work with others to achieve any given objective.</div>
+                <div>I build software across Android, Java and Alfresco—from useful mobile apps to content and workflow solutions. Explore a few projects below or get in touch.</div>
             </div>
             <div id="showoff">
                 <div class="terminal">
@@ -160,21 +159,26 @@
     </div>
 
 <footer>
-    <p>Made by Michał Jastrzębski © 2023</p>
+    <p>Made by Michał Jastrzębski © 2026</p>
 </footer>
 
 
 <script>
     // mobile
-    if (document.documentElement.clientWidth < 600) {
-        let burger = document.getElementById('burger'),
-            nav    = document.getElementById('main-nav');
-        burger.addEventListener('click', function(){
-            this.classList.toggle('is-open');
-            nav.classList.toggle('is-open');
-        });
-
-    }
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('main-nav');
+    burger.addEventListener('click', function() {
+        const isOpen = this.classList.toggle('is-open');
+        nav.classList.toggle('is-open', isOpen);
+        this.setAttribute('aria-expanded', isOpen);
+    });
+    nav.addEventListener('click', function(event) {
+        if (event.target.closest('a')) {
+            burger.classList.remove('is-open');
+            nav.classList.remove('is-open');
+            burger.setAttribute('aria-expanded', 'false');
+        }
+    });
 
 
     new TypeIt('#terminal-type-effect', {
