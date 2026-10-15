@@ -106,7 +106,7 @@ button:focus-visible {
     display: block;
     margin-bottom: .8rem;
     color: var(--accent);
-    content: 'SOFTWARE DEVELOPER  /  KRAKÓW, PL';
+    content: 'LEAD SOFTWARE ENGINEER  /  KRAKÓW, PL';
     font-family: var(--mono);
     font-size: .78rem;
     font-weight: 400;
