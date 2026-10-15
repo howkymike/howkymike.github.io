@@ -221,11 +221,10 @@ button:focus-visible {
 
 .card-right {
     flex: 0 0 42%;
-    min-height: 300px;
+    width: 42%;
+    height: 300px;
+    object-fit: cover;
     background-color: #202722;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .card-left {
@@ -459,7 +458,8 @@ footer {
 
     .card-right {
         flex-basis: auto;
-        min-height: 220px;
+        width: 100%;
+        height: 230px;
         max-height: 260px;
     }
 
