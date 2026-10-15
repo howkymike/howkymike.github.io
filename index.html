@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Michał Jastrzębski — software developer building Android applications and Alfresco solutions.">
+    <meta name="description" content="Michał Jastrzębski is a T-shaped Lead Software Engineer with core expertise in Java and JavaScript, especially React, and experience leading modernizations, architecture, and AI solutions.">
     <meta name="theme-color" content="#101311">
-    <title>Michał Jastrzębski — Software Developer</title>
-
+    <title>Lead Software Engineer | Michał Jastrzębski</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:500&display=swap" rel="stylesheet">
@@ -38,7 +37,15 @@
         <div id="about">
             <div class="personal">
                 <div>Michał Jastrzębski</div>
-                <div>I build software across Android, Java and Alfresco—from useful mobile apps to content and workflow solutions. Explore a few projects below or get in touch.</div>
+                <div>I am a T-shaped Lead Software Engineer with core expertise in Java and JavaScript, especially React, and broad domain knowledge. Alfresco is one of the many platforms I have worked with, alongside Spring, DevSecOps, software architecture, and AI solutions.
+                    I have led modernization initiatives and new feature implementations, created architectures, built a RAG capability for an internal AI system, and supported colleagues as a project buddy and mentor.
+                    <br><br><strong>Experience</strong><br>
+                    Full Stack Software Engineering: <span class="experience-years" data-start-year="2019"></span> years (since 2019)<br>
+                    Corporate finance / fintech: <span class="experience-years" data-start-year="2022"></span> years (since 2022)<br><br>
+                    <strong>Education</strong><br>
+                    Master's degree in Project Management<br>
+                    Bachelor's degree in IT and Cybersecurity
+                </div>
             </div>
             <div id="showoff">
                 <div class="terminal">
@@ -190,7 +197,7 @@
         .options({speed: 100, startDelay: 900})
         .type('whoami <br>')
         .options({speed: 1})
-        .type("Michal Jastrzebski <br><span style=\"color:green;font-weight:bold\">mike@mike-pc:~$</span> ")
+        .type("Michał Jastrzębski — Lead Software Engineer <br><span style=\"color:green;font-weight:bold\">mike@mike-pc:~$</span> ")
         .pause(950)
         .type("<br><span style=\"color:green;font-weight:bold\">mike@mike-pc:~$</span> ")
         .pause(400)
@@ -198,13 +205,19 @@
         .type("finger Michal<br>")
         .options({speed: 1})
         .type("<br>Login: 'Michał Jastrzębski'<br>" +
-            "Skills: 'Java, Android, HTML, CSS, JS, Spring, Bash, Python'<br>" +
-            "Education: 'AGH University of Science and Technology, Applied Computer Science'<br>" +
+            "Role: 'Lead Software Engineer'<br>" +
+            "Skills: 'Java, JavaScript, React, Software Architecture, Alfresco, Spring, DevSecOps, AI solutions'<br>" +
+            "Education: 'Master's degree in Project Management; Bachelor's degree in IT and Cybersecurity'<br>" +
             "Hobbies: 'reading, cycling'<br>" +
             "Localization: 'Malopolska, Poland'<br>" +
             "<span style=\"color:green;font-weight:bold\">mike@mike-pc:~$</span> ")
 
         .go();
+
+    const currentYear = new Date().getFullYear();
+    document.querySelectorAll('.experience-years').forEach((element) => {
+        element.textContent = currentYear - Number(element.dataset.startYear);
+    });
 
 </script>
 </body>
