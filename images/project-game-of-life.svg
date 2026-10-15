@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 600" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#17251f"/>
+      <stop offset="1" stop-color="#101311"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#c2f970" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#c2f970" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="840" height="600" fill="url(#bg)"/>
+  <circle cx="470" cy="290" r="300" fill="url(#glow)"/>
+  <g fill="none" stroke="#70836b" stroke-opacity=".28">
+    <path d="M0 80h840M0 160h840M0 240h840M0 320h840M0 400h840M0 480h840"/>
+    <path d="M80 0v600M160 0v600M240 0v600M320 0v600M400 0v600M480 0v600M560 0v600M640 0v600M720 0v600M800 0v600"/>
+  </g>
+  <g fill="#c2f970">
+    <rect x="238" y="158" width="26" height="26" rx="5"/>
+    <rect x="318" y="158" width="26" height="26" rx="5"/>
+    <rect x="398" y="158" width="26" height="26" rx="5"/>
+    <rect x="238" y="238" width="26" height="26" rx="5"/>
+    <rect x="478" y="238" width="26" height="26" rx="5"/>
+    <rect x="558" y="238" width="26" height="26" rx="5"/>
+    <rect x="318" y="318" width="26" height="26" rx="5"/>
+    <rect x="398" y="318" width="26" height="26" rx="5"/>
+    <rect x="478" y="318" width="26" height="26" rx="5"/>
+    <rect x="638" y="398" width="26" height="26" rx="5"/>
+  </g>
+  <g fill="#f2f4ef" font-family="monospace">
+    <text x="42" y="72" font-size="17" letter-spacing="4">LIFE / SIMULATION</text>
+    <text x="42" y="548" font-size="13" fill="#a3ada4">EVERY CHOICE CHANGES THE NEXT STATE</text>
+  </g>
+</svg>

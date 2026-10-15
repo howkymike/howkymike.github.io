@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Michał Jastrzębski is a T-shaped Lead Software Engineer with core expertise in Java and JavaScript, especially React, and experience leading modernizations, architecture, and AI solutions.">
+    <meta name="theme-color" content="#101311">
     <title>Lead Software Engineer | Michał Jastrzębski</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
@@ -14,11 +15,11 @@
 </head>
 
 <body>
-<button id="burger" class="open-main-nav">
+<button id="burger" class="open-main-nav" type="button" aria-label="Toggle navigation" aria-expanded="false">
     <span class="burger"></span>
     <span class="burger-text">Menu</span>
 </button>
-<nav class="main-nav" id="main-nav">
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
     <ul>
         <li>
             <a href="#projects">Projects</a>
@@ -36,15 +37,6 @@
         <div id="about">
             <div class="personal">
                 <div>Michał Jastrzębski</div>
-                <div>I am a T-shaped Lead Software Engineer with core expertise in Java and JavaScript, especially React, and broad domain knowledge. Alfresco is one of the many platforms I have worked with, alongside Spring, DevSecOps, software architecture, and AI solutions.
-                    I have led modernization initiatives and new feature implementations, created architectures, built a RAG capability for an internal AI system, and supported colleagues as a project buddy and mentor.
-                    <br><br><strong>Experience</strong><br>
-                    Full Stack Software Engineering: <span class="experience-years" data-start-year="2019"></span> years (since 2019)<br>
-                    Corporate finance / fintech: <span class="experience-years" data-start-year="2022"></span> years (since 2022)<br><br>
-                    <strong>Education</strong><br>
-                    Master's degree in Project Management<br>
-                    Bachelor's degree in IT and Cybersecurity
-                </div>
             </div>
             <div id="showoff">
                 <div class="terminal">
@@ -65,29 +57,7 @@
         <div id="projects">
             <hr><div class="section-name">PROJECTS</div>
             <div class="card">
-                <div class="card-right"></div>
-                <div class="card-left">
-                    <div class="card-title">Game of life</div>
-                    <div class="card-technologies">
-                        <div class="card-tech">
-                            <span>Android</span>
-                        </div>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="card-desc">Life on Steroids is the life-simulating game.
-                        You begin as a young person with big ambitions. But first, you have to take care of the primary
-                        needs - Food, health, energy and happiness.
-                        There are intriguing career paths to be discovered, each involving special engagement.
-                        If you are in a trouble, you can always turn to the dark side. But beware of consequences!!!
-                    </div>
-                </div>
-                <a class="myFab" href="https://play.google.com/store/apps/details?id=com.howky.hubert.gameoflife">
-                    <i class="fas fa-arrow-right fa-2x"></i>
-                </a>
-            </div>
-
-            <div class="card">
-                <div class="card-right" style="background-image: url('images/alfresco_logo.png'); background-size: cover;"></div>
+                <img class="card-right" src="images/project-alfresco.svg" alt="Original illustration of connected documents and workflow nodes">
                 <div class="card-left">
                     <div class="card-title">Alfresco Development</div>
                     <div class="card-technologies">
@@ -96,68 +66,73 @@
                         <div class="card-tech"><span>Activiti</span></div>
                     </div>
                     <div class="separator"></div>
-                    <div class="card-desc">Creating a process workflow which involved proper Alfresco installation, configuration, many
-                        Share customizations and data interchange with external Database. Following technologies where used: Java, Spring,
-                        Freemarker, Activiti, HTML, CSS, Javascript.
-                    </div>
+                    <div class="card-desc">From platform setup to workflow delivery, this project brought together Alfresco installation and configuration, Share customizations, and data exchange with an external database. Built with Java, Spring, Freemarker, Activiti, HTML, CSS and JavaScript.</div>
                 </div>
-                    <a class="myFab" href="https://github.com/howkymike/Alfresco-Windows-Installation-Guide">
+                    <a class="myFab" href="https://github.com/howkymike/Alfresco-Windows-Installation-Guide" aria-label="View the Alfresco installation guide on GitHub">
                         <i class="fas fa-arrow-right fa-2x"></i>
                     </a>
             </div>
 
             <div class="card">
-                <div class="card-right" style="background-image: url('images/udacity.png');background-size: contain;background-repeat: no-repeat;
-                background-position: center;"></div>
+                <img class="card-right" src="images/project-banking.svg" alt="Original illustration of a mobile banking app interface">
                 <div class="card-left">
-                    <div class="card-title">Udacity Nanodegree</div>
+                    <div class="card-title">Banking Application</div>
                     <div class="card-technologies">
-                        <div class="card-tech"><span>Android</span></div>
                         <div class="card-tech"><span>Java</span></div>
+                        <div class="card-tech"><span>JavaScript</span></div>
+                        <div class="card-tech"><span>Web Components</span></div>
                     </div>
                     <div class="separator"></div>
-                    <div class="card-desc">Given project goals and guidlines, I created a few Android Apps
-                        under the supervision of Udacity Android Senior Developers.
-                        Apps are written solely in the Java Programming Language &
-                        utilize stable release versions of all libraries, Gradle, and Android Studio.
-                        They also conform to common standards found in the  <a href="http://udacity.github.io/android-nanodegree-guidelines/core.html">Android Nanodegree General Project Guidelines</a>.
-
-                    </div>
+                    <div class="card-desc">Developing a banking application used by millions of users, with a focus on automating processes. Built with Java, JavaScript and Web Components.</div>
                 </div>
-                    <a class="myFab" href="https://github.com/howkymike/PopMovies">
+                    <a class="myFab" href="https://www.linkedin.com/in/michal-jastrzebski/" aria-label="Discuss my banking application experience on LinkedIn">
                     <i class="fas fa-arrow-right fa-2x"></i>
                     </a>
             </div>
 
             <div class="card">
-                <div class="card-right" style="background-image: url('images/html-js-css.png');background-size: contain;background-repeat: no-repeat;
-                background-position: center;background-color: #373f49;"></div>
+                <img class="card-right" src="images/project-trading.svg" alt="Original illustration of a trading workflow and connected data stream">
                 <div class="card-left">
-                    <div class="card-title">Portfolio website</div>
+                    <div class="card-title">Trading Application</div>
                     <div class="card-technologies">
-                        <div class="card-tech"><span>HTML</span></div>
-                        <div class="card-tech"><span>CSS</span></div>
-                        <div class="card-tech"><span>JS</span></div>
+                        <div class="card-tech"><span>Java</span></div>
+                        <div class="card-tech"><span>React</span></div>
+                        <div class="card-tech"><span>Kafka</span></div>
+                        <div class="card-tech"><span>Azure</span></div>
                     </div>
                     <div class="separator"></div>
-                    <div class="card-desc">Wanting to present myself in the developer world I created this portfolio website. It is hosted via Github
-                        Pages. Technologies used: HTML, Javascript, CSS, and awesome JS libraries (Font Awesome & TypeIt).
-                    </div>
+                    <div class="card-desc">Developing an application used in a trading process, connecting a Java and React application with Kafka and Azure.</div>
                 </div>
-                    <a class="myFab" href="https://github.com/howkymike/howkymike.github.io">
+                    <a class="myFab" href="https://www.linkedin.com/in/michal-jastrzebski/" aria-label="Discuss my trading application experience on LinkedIn">
                     <i class="fas fa-arrow-right fa-2x"></i>
                     </a>
+            </div>
+
+            <div class="card">
+                <img class="card-right" src="images/project-game-of-life.svg" alt="Original illustration of a glowing life simulation grid">
+                <div class="card-left">
+                    <div class="card-title">Game of life</div>
+                    <div class="card-technologies">
+                        <div class="card-tech">
+                            <span>Android</span>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="card-desc">Every choice shapes the next chapter. Balance food, health, energy and happiness as you build a career—and weigh the consequences before taking a shortcut to the dark side.</div>
+                </div>
+                <a class="myFab" href="https://play.google.com/store/apps/details?id=com.howky.hubert.gameoflife" aria-label="View Game of Life on Google Play">
+                    <i class="fas fa-arrow-right fa-2x"></i>
+                </a>
             </div>
         </div>
 
         <div id="contact">
             <hr><div class="section-name">CONTACT</div>
             <div class="contacts">
-                <a href="mailto:?Subject=Job%20Offer"><i class="fas fa-envelope"></i> Email</a>
                 <a href="https://github.com/howkymike"><i class="fab fa-github"></i> Github</a>
                 <a href="https://www.linkedin.com/in/michal-jastrzebski/"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
-            <a class="contact-resume" href="https://github.com/howkymike/howkymike.github.io/raw/master/resume-en.pdf" download>Contact me to get Résumé</a>
+            <a class="contact-resume" href="https://www.linkedin.com/in/michal-jastrzebski/">Connect on LinkedIn for my Résumé</a>
         </div>
         <div id="résumé">
 
@@ -165,21 +140,26 @@
     </div>
 
 <footer>
-    <p>Made by Michał Jastrzębski © 2023</p>
+    <p>Made by Michał Jastrzębski © 2026</p>
 </footer>
 
 
 <script>
     // mobile
-    if (document.documentElement.clientWidth < 600) {
-        let burger = document.getElementById('burger'),
-            nav    = document.getElementById('main-nav');
-        burger.addEventListener('click', function(){
-            this.classList.toggle('is-open');
-            nav.classList.toggle('is-open');
-        });
-
-    }
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('main-nav');
+    burger.addEventListener('click', function() {
+        const isOpen = this.classList.toggle('is-open');
+        nav.classList.toggle('is-open', isOpen);
+        this.setAttribute('aria-expanded', isOpen);
+    });
+    nav.addEventListener('click', function(event) {
+        if (event.target.closest('a')) {
+            burger.classList.remove('is-open');
+            nav.classList.remove('is-open');
+            burger.setAttribute('aria-expanded', 'false');
+        }
+    });
 
 
     new TypeIt('#terminal-type-effect', {
@@ -196,22 +176,25 @@
         .type("<br><span style=\"color:green;font-weight:bold\">mike@mike-pc:~$</span> ")
         .pause(400)
         .options({speed: 100})
+        .type("cat ~/about.txt<br>")
+        .options({speed: 1})
+        .type("<br>Lead Software Engineer focused on Java, JavaScript and React, with experience across software architecture, DevSecOps, Alfresco and AI. I have led modernization initiatives, built internal AI capabilities, and supported teammates through mentoring.<br>")
+        .pause(500)
+        .type("<br><span style=\"color:green;font-weight:bold\">mike@mike-pc:~$</span> ")
+        .pause(400)
+        .options({speed: 100})
         .type("finger Michal<br>")
         .options({speed: 1})
         .type("<br>Login: 'Michał Jastrzębski'<br>" +
             "Role: 'Lead Software Engineer'<br>" +
             "Skills: 'Java, JavaScript, React, Software Architecture, Alfresco, Spring, DevSecOps, AI solutions'<br>" +
+            "Experience: 'Full Stack Software Engineering since 2019; Corporate finance / fintech since 2022'<br>" +
             "Education: 'Master's degree in Project Management; Bachelor's degree in IT and Cybersecurity'<br>" +
             "Hobbies: 'reading, cycling'<br>" +
             "Localization: 'Malopolska, Poland'<br>" +
             "<span style=\"color:green;font-weight:bold\">mike@mike-pc:~$</span> ")
 
         .go();
-
-    const currentYear = new Date().getFullYear();
-    document.querySelectorAll('.experience-years').forEach((element) => {
-        element.textContent = currentYear - Number(element.dataset.startYear);
-    });
 
 </script>
 </body>
